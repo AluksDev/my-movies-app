@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-monoton: "Monoton", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+}
+
+@layer components {
+  .trending-movies-section {
+    @apply my-4 max-w-full;
+
+    & ul {
+      @apply flex items-center overflow-x-auto max-w-full;
+    }
+
+    & ul > li {
+      @apply text-white flex flex-shrink-0 items-center w-48 m-4 p-4 relative bg-[#110B29] rounded-3xl;
+    }
+
+    & ul > li > img {
+      @apply w-full rounded-3xl opacity-60 hover:opacity-100 hover:z-10 transition-all duration-300 ease-in-out;
+    }
+
+    li img:hover + p {
+      @apply opacity-20 transition-opacity duration-300 ease-in-out;
+    }
+
+    & ul > li > p {
+      @apply absolute right-4/5 text-5xl text-white font-monoton lg:text-9xl md:text-7xl;
+    }
+  }
+
+  .wrapper {
+    @apply flex flex-col pt-12 items-center justify-center min-h-screen text-center bg-gradient-to-tr from-[#1F071D] to-[#010011];
+
+    & > header {
+      @apply mb-8 w-1/2;
+
+      & img {
+        @apply mx-auto w-1/3 max-w-full h-auto;
+      }
+
+      & h1 {
+        @apply font-semibold mt-8 mb-16 text-white text-4xl sm:text-5xl md:text-6xl;
+      }
+    }
+  }
+
+  .all-movies {
+    @apply flex flex-col items-center justify-center w-full;
+
+    & > div ul {
+      @apply flex flex-wrap px-16 items-center justify-center;
+    }
+
+    & h2 {
+      @apply text-3xl font-semibold mb-6 text-white;
+    }
+  }
+
+  .movie-card {
+    @apply flex flex-col items-center m-4 p-3 shadow-2xl bg-[#0B071B] rounded-lg text-white max-w-70 cursor-pointer;
+
+    & > img {
+      @apply w-full h-auto rounded-4xl px-6 py-4;
+    }
+
+    & > div {
+      @apply w-full text-left px-6;
+    }
+  }
+
+  .movie-details {
+    @apply flex items-center justify-start;
+
+    & > span {
+      @apply mx-2;
+    }
+  }
+
+  .search {
+    @apply flex flex-col items-center justify-center w-full max-w-lg mx-auto text-white;
+    & > div {
+      @apply flex items-center bg-gray-800 rounded-md px-3 py-4 max-w-md w-full shadow-sm;
+    }
+    & > div > img {
+      @apply w-fit opacity-60 mr-8;
+    }
+    & > div input {
+      @apply text-white bg-transparent focus:outline-none w-full text-sm;
+    }
+    & > h2 {
+      @apply mt-4 text-gray-700;
+    }
+  }
+
+  .signin-container {
+    @apply fixed flex items-center justify-center top-0 left-0 w-full h-lvh bg-white/50 z-20 backdrop-blur-sm;
+
+    & input {
+      @apply border-2 border-gray-900 rounded-md px-4 py-2 focus:outline-none;
+    }
+
+    & h2 {
+      @apply text-2xl font-semibold mb-4;
+    }
+  }
+
+  .movie-details-card {
+    @apply fixed flex items-center justify-center top-0 left-0 w-full h-lvh bg-white/50 z-20 backdrop-blur-sm;
+  }
+}
+
+@utility text-gradient {
+  @apply bg-[linear-gradient(to_right,_#FA282B,_#FCFDF7,_#FA282B)] bg-clip-text text-transparent;
+}
+
+@utility trendin-font {
+  .font-roboto {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@utility hide-scollbar {
+  &::-webkit-scrollbar {
+    @apply hidden;
+  }
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+}
