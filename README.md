@@ -2,6 +2,11 @@
 
 A full-stack movie discovery application that allows users to browse popular movies from the TMDb API, track trending searches, and manage their personal movie favorites with user authentication.
 
+![Movie App](./docs/my_movie_app_video.gif)
+![Movie App](./docs/img1.png)
+![Movie App](./docs/img2.png)
+![Movie App](./docs/img3.png)
+
 ## ✨ Features
 
 - **Movie Discovery**: Browse popular movies and trending titles based on user searches
@@ -169,42 +174,3 @@ The application uses MySQL to store:
 - **Users**: User accounts with hashed passwords
 - **Favorites**: User's favorite movies mapping
 - **Trending**: Search history and trending metrics
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License - see the LICENSE file for details.
-
-## 🙋 Support
-
-If you encounter any issues or have questions, please:
-1. Check existing [issues](https://github.com/AluksDev/my-movies-app/issues)
-2. Create a new issue with a detailed description
-3. Include steps to reproduce the problem
-
-## 🎯 Future Enhancements
-
-- [ ] Add movie ratings and reviews
-- [ ] Implement user recommendations based on favorites
-- [ ] Add movie list creation and sharing
-- [ ] Social features (follow users, see their favorites)
-- [ ] Advanced filtering and sorting options
-- [ ] Watchlist feature (plan to watch)
-- [ ] Mobile app version
-- [ ] Dark mode theme
-
-## 📞 Contact
-
-**Author**: AluksDev  
-**Repository**: [my-movies-app](https://github.com/AluksDev/my-movies-app)
-
----
-
-**Made with ❤️ for movie enthusiasts**
